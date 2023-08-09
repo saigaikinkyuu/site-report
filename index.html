@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LIFF Button Example</title>
+</head>
+<body>
+    <button id="sendMessageButton">メッセージを送る</button>
+
+    <script>
+        document.getElementById('sendMessageButton').addEventListener('click', function() {
+            liff.sendMessages([
+                {
+                    type: 'text',
+                    text: 'こんにちは、LINE公式アカウントからのメッセージです！'
+                }
+            ])
+            .then(function() {
+                window.alert('メッセージが送信されました！');
+            })
+            .catch(function(error) {
+                window.alert('メッセージの送信に失敗しました: ' + error);
+            });
+        });
+    </script>
+</body>
+</html>
