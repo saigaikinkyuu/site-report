@@ -5,23 +5,397 @@
     <title>LIFF Button Example</title>
 </head>
 <body>
-    <button id="sendMessageButton">メッセージを送る</button>
+    <style>
+        hiddenElement1{
+            display: none;
+        }
+        hiddenElement2{
+            display: none;
+        }
+        hiddenElement3{
+            display: none;
+        }
+        hiddenElement4{
+            display: none;
+        }
+        hiddenElement5{
+            display: none;
+        }
+        hiddenElement6{
+            display: none;
+        }
+        hiddenElement7{
+            display: none;
+        }
+        hiddenElement8{
+            display: none;
+        }
+    </style>
+               <div id="Element">
+               <h2>サービス運営状況</h2>
+               <h2>確認したいサービスを選んでください。</h2>
+                   <p>掲載サービス</p>
+                   <a href="#" id="showLink1">お知らせ</a>
+                   <a href="#" id="showLink2">地震情報</a>
+                   <a href="#" id="showLink3">気象情報</a>
+                   <a href="#" id="showLink4">Jアラート</a>
+                   <h2>配信(LINE)サービス</h2>
+                   <a href="#" id="showLink7">地震情報</a>
+                   <a href="#" id="showLink8">気象情報</a>
+                   <h2>その他</h2>
+                   <a href="#" id="showLink5">緊急伝言板</a>
+                   <a href="#" id="showLink6">大規模地震配信</a>
+               </div>
+    　　　　　　　<div id="hiddenElement1">
+                <div style="display: flex;">
+                <h2 id="kind1"></h2>
+                <h2>の、サービス運営状況です。</h2>　　　　
+                </div>
+               <h2>注意：ホーム画面に戻るとき、サイトの下部の戻るボタンより戻ってください。</h2>
+    　　　　　　　<h2>サービス状況</h2>
+                <p>記号の見方</p>
+                <div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">○</p><p>･･･通常通り</p></div><div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">◎</p><p>･･･障害復旧</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">※○</p><p>･･･一部制限あり</p></div>
+                <div style="display: flex; height: 20px;"><p style="color: red;">✕</p><p>･･･障害発生中(復旧作業中)</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">✕</p><p>･･･制限中</p></div><div style="display: flex; height: 20px; padding-bottom: 25px;"><p>ー</p><p>･･･サービス提供終了・不明</p></div>
+                  <div id="last-updated"></div>
+                <div class="table-container">
+                  <table class="meal-table">
+                    <tbody id="product-table2">
+                      <tr>
+                        <th>運営状況</th>
+                        <td id="situation1" style="font-size: 25px;"></td>
+                        <th>備考</th>
+                        <td id="memo1" style="font-size: 25px;"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+               <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
+           </div>
+    <div id="hiddenElement2">
+                <div style="display: flex;">
+                <h2 id="kind2"></h2>
+                <h2>の、サービス運営状況です。</h2>　　　　
+                </div>　　　
+               <h2>注意：ホーム画面に戻るとき、サイトの下部の戻るボタンより戻ってください。</h2>
+    　　　　　　　<h2>サービス状況</h2>
+                <p>記号の見方</p>
+                <div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">○</p><p>･･･通常通り</p></div><div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">◎</p><p>･･･障害復旧</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">※○</p><p>･･･一部制限あり</p></div>
+                <div style="display: flex; height: 20px;"><p style="color: red;">✕</p><p>･･･障害発生中(復旧作業中)</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">✕</p><p>･･･制限中</p></div><div style="display: flex; height: 20px; padding-bottom: 25px;"><p>ー</p><p>･･･サービス提供終了・不明</p></div>
+                  <div id="last-updated"></div>
+                <div class="table-container">
+                  <table class="meal-table">
+                    <tbody id="product-table2">
+                      <tr>
+                        <th>運営状況</th>
+                        <td id="situation2" style="font-size: 25px;"></td>
+                        <th>備考</th>
+                        <td id="memo2" style="font-size: 25px;"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+               <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
+           </div>
+    <div id="hiddenElement3">
+                <div style="display: flex;">
+                <h2 id="kind3"></h2>
+                <h2>の、サービス運営状況です。</h2>　　　　
+                </div>
+               <h2>注意：ホーム画面に戻るとき、サイトの下部の戻るボタンより戻ってください。</h2>
+    　　　　　　　<h2>サービス状況</h2>
+                <p>記号の見方</p>
+                <div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">○</p><p>･･･通常通り</p></div><div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">◎</p><p>･･･障害復旧</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">※○</p><p>･･･一部制限あり</p></div>
+                <div style="display: flex; height: 20px;"><p style="color: red;">✕</p><p>･･･障害発生中(復旧作業中)</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">✕</p><p>･･･制限中</p></div><div style="display: flex; height: 20px; padding-bottom: 25px;"><p>ー</p><p>･･･サービス提供終了・不明</p></div>
+                  <div id="last-updated"></div>
+                <div class="table-container">
+                  <table class="meal-table">
+                    <tbody id="product-table2">
+                      <tr>
+                        <th>運営状況</th>
+                        <td id="situation3" style="font-size: 25px;"></td>
+                        <th>備考</th>
+                        <td id="memo3" style="font-size: 25px;"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+               <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
+           </div>
+    <div id="hiddenElement4">
+                <div style="display: flex;">
+                <h2 id="kind4"></h2>
+                <h2>の、サービス運営状況です。</h2>　　　　
+                </div>
+               <h2>注意：ホーム画面に戻るとき、サイトの下部の戻るボタンより戻ってください。</h2>
+    　　　　　　　<h2>サービス状況</h2>
+                <p>記号の見方</p>
+                <div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">○</p><p>･･･通常通り</p></div><div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">◎</p><p>･･･障害復旧</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">※○</p><p>･･･一部制限あり</p></div>
+                <div style="display: flex; height: 20px;"><p style="color: red;">✕</p><p>･･･障害発生中(復旧作業中)</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">✕</p><p>･･･制限中</p></div><div style="display: flex; height: 20px; padding-bottom: 25px;"><p>ー</p><p>･･･サービス提供終了・不明</p></div>
+                  <div id="last-updated"></div>
+                <div class="table-container">
+                  <table class="meal-table">
+                    <tbody id="product-table2">
+                      <tr>
+                        <th>運営状況</th>
+                        <td id="situation4" style="font-size: 25px;"></td>
+                        <th>備考</th>
+                        <td id="memo4" style="font-size: 25px;"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+               <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
+           </div>
+    <div id="hiddenElement5">
+                <div style="display: flex;">
+                <h2 id="kind5"></h2>
+                <h2>の、サービス運営状況です。</h2>　　　　
+                </div>
+               <h2>注意：ホーム画面に戻るとき、サイトの下部の戻るボタンより戻ってください。</h2>
+    　　　　　　　<h2>サービス状況</h2>
+                <p>記号の見方</p>
+                <div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">○</p><p>･･･通常通り</p></div><div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">◎</p><p>･･･障害復旧</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">※○</p><p>･･･一部制限あり</p></div>
+                <div style="display: flex; height: 20px;"><p style="color: red;">✕</p><p>･･･障害発生中(復旧作業中)</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">✕</p><p>･･･制限中</p></div><div style="display: flex; height: 20px; padding-bottom: 25px;"><p>ー</p><p>･･･サービス提供終了・不明</p></div>
+                  <div id="last-updated"></div>
+                <div class="table-container">
+                  <table class="meal-table">
+                    <tbody id="product-table2">
+                      <tr>
+                        <th>運営状況</th>
+                        <td id="situation5" style="font-size: 25px;"></td>
+                        <th>備考</th>
+                        <td id="memo5" style="font-size: 25px;"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+               <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
+           </div>
+    <div id="hiddenElement6">
+                <div style="display: flex;">
+                <h2 id="kind6"></h2>
+                <h2>の、サービス運営状況です。</h2>　　　　
+                </div>
+               <h2>注意：ホーム画面に戻るとき、サイトの下部の戻るボタンより戻ってください。</h2>
+    　　　　　　　<h2>サービス状況</h2>
+                <p>記号の見方</p>
+                <div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">○</p><p>･･･通常通り</p></div><div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">◎</p><p>･･･障害復旧</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">※○</p><p>･･･一部制限あり</p></div>
+                <div style="display: flex; height: 20px;"><p style="color: red;">✕</p><p>･･･障害発生中(復旧作業中)</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">✕</p><p>･･･制限中</p></div><div style="display: flex; height: 20px; padding-bottom: 25px;"><p>ー</p><p>･･･サービス提供終了・不明</p></div>
+                  <div id="last-updated"></div>
+                <div class="table-container">
+                  <table class="meal-table">
+                    <tbody id="product-table2">
+                      <tr>
+                        <th>運営状況</th>
+                        <td id="situation6" style="font-size: 25px;"></td>
+                        <th>備考</th>
+                        <td id="memo6" style="font-size: 25px;"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+               <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
+           </div>
+    <div id="hiddenElement7">
+                <div style="display: flex;">
+                <h2 id="kind7"></h2>
+                <h2>の、サービス運営状況です。</h2>　　　　
+                </div>
+               <h2>注意：ホーム画面に戻るとき、サイトの下部の戻るボタンより戻ってください。</h2>
+    　　　　　　　<h2>サービス状況</h2>
+                <p>記号の見方</p>
+                <div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">○</p><p>･･･通常通り</p></div><div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">◎</p><p>･･･障害復旧</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">※○</p><p>･･･一部制限あり</p></div>
+                <div style="display: flex; height: 20px;"><p style="color: red;">✕</p><p>･･･障害発生中(復旧作業中)</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">✕</p><p>･･･制限中</p></div><div style="display: flex; height: 20px; padding-bottom: 25px;"><p>ー</p><p>･･･サービス提供終了・不明</p></div>
+                  <div id="last-updated"></div>
+                <div class="table-container">
+                  <table class="meal-table">
+                    <tbody id="product-table2">
+                      <tr>
+                        <th>運営状況</th>
+                        <td id="situation7" style="font-size: 25px;"></td>
+                        <th>備考</th>
+                        <td id="memo7" style="font-size: 25px;"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+               <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
+           </div>
+    <div id="hiddenElement8">
+                <div style="display: flex;">
+                <h2 id="kind8"></h2>
+                <h2>の、サービス運営状況です。</h2>　　　　
+                </div>
+               <h2>注意：ホーム画面に戻るとき、サイトの下部の戻るボタンより戻ってください。</h2>
+    　　　　　　　<h2>サービス状況</h2>
+                <p>記号の見方</p>
+                <div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">○</p><p>･･･通常通り</p></div><div style="display: flex; height: 20px;"><p style="color: rgb(60, 255, 0);">◎</p><p>･･･障害復旧</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">※○</p><p>･･･一部制限あり</p></div>
+                <div style="display: flex; height: 20px;"><p style="color: red;">✕</p><p>･･･障害発生中(復旧作業中)</p></div><div style="display: flex; height: 20px;"><p style="color: orange;">✕</p><p>･･･制限中</p></div><div style="display: flex; height: 20px; padding-bottom: 25px;"><p>ー</p><p>･･･サービス提供終了・不明</p></div>
+                  <div id="last-updated"></div>
+                <div class="table-container">
+                  <table class="meal-table">
+                    <tbody id="product-table2">
+                      <tr>
+                        <th>運営状況</th>
+                        <td id="situation8" style="font-size: 25px;"></td>
+                        <th>備考</th>
+                        <td id="memo8" style="font-size: 25px;"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+               <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
+           </div>
+                <script>
+                    // リンク要素と表示対象要素を取得
+                    const showLink1 = document.getElementById('showLink1');
+                    const showLink2 = document.getElementById('showLink2');
+                    const showLink3 = document.getElementById('showLink3');
+                    const showLink4 = document.getElementById('showLink4');
+                    const showLink5 = document.getElementById('showLink5');
+                    const showLink6 = document.getElementById('showLink6');
+                    const showLink7 = document.getElementById('showLink7');
+                    const showLink8 = document.getElementById('showLink8');
+                    const hiddenElement1 = document.getElementById('hiddenElement1');
+                    const hiddenElement2 = document.getElementById('hiddenElement2');
+                    const hiddenElement3 = document.getElementById('hiddenElement3');
+                    const hiddenElement4 = document.getElementById('hiddenElement4');
+                    const hiddenElement5 = document.getElementById('hiddenElement5');
+                    const hiddenElement6 = document.getElementById('hiddenElement6');
+                    const hiddenElement7 = document.getElementById('hiddenElement7');
+                    const hiddenElement8 = document.getElementById('hiddenElement8');
 
-    <script>
-        document.getElementById('sendMessageButton').addEventListener('click', function() {
-            liff.sendMessages([
-                {
-                    type: 'text',
-                    text: 'こんにちは、LINE公式アカウントからのメッセージです！'
-                }
-            ])
-            .then(function() {
-                window.alert('メッセージが送信されました！');
-            })
-            .catch(function(error) {
-                window.alert('メッセージの送信に失敗しました: ' + error);
-            });
-        });
-    </script>
+                    // クリックイベントリスナーを追加
+                    showLink1.addEventListener('click', function(event) {
+                        event.preventDefault(); // リンクのデフォルト動作を無効にする
+                        Element.style.display = 'none'; // 要素を表示する
+                        hiddenElement1.style.display = 'block'; // 要素を表示する
+                    });
+                    showLink2.addEventListener('click', function(event) {
+                        Element.style.display = 'none'; // 要素を表示する
+                        event.preventDefault(); // リンクのデフォルト動作を無効にする
+                        hiddenElement2.style.display = 'block'; // 要素を表示する
+                    });
+                    showLink3.addEventListener('click', function(event) {
+                        Element.style.display = 'none'; // 要素を表示する
+                        event.preventDefault(); // リンクのデフォルト動作を無効にする
+                        hiddenElement3.style.display = 'block'; // 要素を表示する
+                    });
+                    showLink4.addEventListener('click', function(event) {
+                        Element.style.display = 'none'; // 要素を表示する
+                        event.preventDefault(); // リンクのデフォルト動作を無効にする
+                        hiddenElement4.style.display = 'block'; // 要素を表示する
+                    });
+                    showLink5.addEventListener('click', function(event) {
+                        Element.style.display = 'none'; // 要素を表示する
+                        event.preventDefault(); // リンクのデフォルト動作を無効にする
+                        hiddenElement5.style.display = 'block'; // 要素を表示する
+                    });
+                    showLink6.addEventListener('click', function(event) {
+                        Element.style.display = 'none'; // 要素を表示する
+                        event.preventDefault(); // リンクのデフォルト動作を無効にする
+                        hiddenElement6.style.display = 'block'; // 要素を表示する
+                    });
+                    showLink7.addEventListener('click', function(event) {
+                        Element.style.display = 'none'; // 要素を表示する
+                        event.preventDefault(); // リンクのデフォルト動作を無効にする
+                        hiddenElement7.style.display = 'block'; // 要素を表示する
+                    });
+                    showLink8.addEventListener('click', function(event) {
+                        Element.style.display = 'none'; // 要素を表示する
+                        event.preventDefault(); // リンクのデフォルト動作を無効にする
+                        hiddenElement8.style.display = 'block'; // 要素を表示する
+                    });
+                </script>
+                <script>
+                  function fetchData() {
+                    var api_url = 'https://script.google.com/macros/s/AKfycbyg0PznUw7VfJfOEVu-IctS4AcCyTBYWxvPEJSf8e4r125Cnp_X-VPTDuH855kYz8LUcA/exec';
+                
+                    fetch(api_url)
+                      .then(function(fetch_data) {
+                        return fetch_data.json();
+                      })
+                      .then(function(json) {
+                        for (var i = 0; i < json.length; i++) {
+                          if (json[i].kind && json[i].situation) {
+                            var situation_text;
+                            if (json[i].situation === '通常通り') {
+                              situation_text = '○';
+                            } else if (json[i].situation === '障害復旧') {
+                              situation_text = '◎';
+                            } else if (json[i].situation === '一部制限あり') {
+                              situation_text = '※○';
+                            } else if (json[i].situation === '障害発生中') {
+                              situation_text = '✕';
+                            } else if (json[i].situation === '制限中') {
+                              situation_text = '✕';
+                            } else if (json[i].situation === '終了') {
+                              situation_text = 'ー';
+                            } else if (json[i].situation === '不明') {
+                              situation_text = 'ー';
+                            }
+                
+                            var situation_id = 'situation' + (i + 1);
+                            var situation_cell = document.getElementById(situation_id);
+                            if (json[i].situation === '通常通り') {
+                              situation_cell.classList.add('green_text')
+                            } else if (json[i].situation === '障害復旧') {
+                              situation_cell.classList.add('green_text')
+                            } else if (json[i].situation === '一部制限あり') {
+                              situation_cell.classList.add('orange_text')
+                            } else if (json[i].situation === '障害発生中') {
+                              situation_cell.classList.add('red_text')
+                            } else if (json[i].situation === '制限中') {
+                              situation_cell.classList.add('orange_text')
+                            } else if (json[i].situation === '終了') {
+                              situation_cell.classList.add('black_text')
+                            } else if (json[i].situation === '不明') {
+                              situation_cell.classList.add('black_text')
+                            }
+                            if (situation_cell) {
+                              situation_cell.textContent = situation_text;
+                            }
+                            var memo_id = 'memo' + (i + 1);
+                            var memo_cell = document.getElementById(memo_id);
+                            var memo_text = json[i].memo;
+                              if (memo_cell) {
+                              memo_cell.textContent = memo_text;
+                            }
+                          }
+                          // 最終変更時刻を更新
+        var lastUpdatedElement = document.getElementById('last-updated');
+        if (lastUpdatedElement) {
+          var currentTime = new Date();
+          var formattedTime = currentTime.toLocaleString();
+          lastUpdatedElement.textContent = '最終変更時刻: ' + formattedTime;
+        }
+                        }
+                      });
+                  }
+                
+                  // 初回実行時にデータを取得する
+                  fetchData();
+                
+                  // 10分ごとにfetchDataを実行する
+                  setInterval(fetchData, 10 * 60 * 1000); // 10分 = 10 * 60 * 1000 ミリ秒
+                </script>
+                <style>
+                  .green_text{
+                    color: rgb(24, 202, 0);
+                    background-color: rgb(250 248 231);
+                  }
+                  .orange_text{
+                    color: orange;
+                  }
+                  .red_text{
+                    color: red;
+                  }
+                  .black_text{
+                    color: black;
+                  }
+                </style>
+        </div>
+        </div>
+        <table id="table-data"></table>
 </body>
 </html>
