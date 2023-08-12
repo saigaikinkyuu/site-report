@@ -46,7 +46,7 @@
                    <a href="#" id="showLink5">緊急伝言板</a>
                    <a href="#" id="showLink6">大規模地震配信</a>
                </div>
-    　　　　　　　<div id="hiddenElement1">
+    　　　　　　　<div id="hiddenElement1"　style="display: none;">
                 <div style="display: flex;">
                 <h2 id="kind1"></h2>
                 <h2>の、サービス運営状況です。</h2>　　　　
@@ -71,7 +71,7 @@
                 </div>
                <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
            </div>
-    <div id="hiddenElement2">
+    <div id="hiddenElement2"　style="display: none;">
                 <div style="display: flex;">
                 <h2 id="kind2"></h2>
                 <h2>の、サービス運営状況です。</h2>　　　　
@@ -96,7 +96,7 @@
                 </div>
                <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
            </div>
-    <div id="hiddenElement3">
+    <div id="hiddenElement3"　style="display: none;">
                 <div style="display: flex;">
                 <h2 id="kind3"></h2>
                 <h2>の、サービス運営状況です。</h2>　　　　
@@ -121,7 +121,7 @@
                 </div>
                <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
            </div>
-    <div id="hiddenElement4">
+    <div id="hiddenElement4"　style="display: none;">
                 <div style="display: flex;">
                 <h2 id="kind4"></h2>
                 <h2>の、サービス運営状況です。</h2>　　　　
@@ -146,7 +146,7 @@
                 </div>
                <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
            </div>
-    <div id="hiddenElement5">
+    <div id="hiddenElement5"　style="display: none;">
                 <div style="display: flex;">
                 <h2 id="kind5"></h2>
                 <h2>の、サービス運営状況です。</h2>　　　　
@@ -171,7 +171,7 @@
                 </div>
                <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
            </div>
-    <div id="hiddenElement6">
+    <div id="hiddenElement6"　style="display: none;">
                 <div style="display: flex;">
                 <h2 id="kind6"></h2>
                 <h2>の、サービス運営状況です。</h2>　　　　
@@ -196,7 +196,7 @@
                 </div>
                <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
            </div>
-    <div id="hiddenElement7">
+    <div id="hiddenElement7"　style="display: none;">
                 <div style="display: flex;">
                 <h2 id="kind7"></h2>
                 <h2>の、サービス運営状況です。</h2>　　　　
@@ -221,7 +221,7 @@
                 </div>
                <a href="#" id="back" style="color: blue; text-decoration: none;">＜戻る</a>
            </div>
-    <div id="hiddenElement8">
+    <div id="hiddenElement8"　style="display: none;">
                 <div style="display: flex;">
                 <h2 id="kind8"></h2>
                 <h2>の、サービス運営状況です。</h2>　　　　
@@ -256,6 +256,7 @@
                     const showLink6 = document.getElementById('showLink6');
                     const showLink7 = document.getElementById('showLink7');
                     const showLink8 = document.getElementById('showLink8');
+                    const showLink9 = document.getElementById('back');
                     const hiddenElement1 = document.getElementById('hiddenElement1');
                     const hiddenElement2 = document.getElementById('hiddenElement2');
                     const hiddenElement3 = document.getElementById('hiddenElement3');
@@ -305,6 +306,18 @@
                         Element.style.display = 'none'; // 要素を表示する
                         event.preventDefault(); // リンクのデフォルト動作を無効にする
                         hiddenElement8.style.display = 'block'; // 要素を表示する
+                    });
+                    showLink9.addEventListener('click', function(event) {
+                        Element.style.display = 'block'; // 要素を表示する
+                        event.preventDefault(); // リンクのデフォルト動作を無効にする
+                        hiddenElement1.style.display = 'none'; // 要素を表示する
+                        hiddenElement2.style.display = 'none'; // 要素を表示する
+                        hiddenElement3.style.display = 'none'; // 要素を表示する
+                        hiddenElement4.style.display = 'none'; // 要素を表示する
+                        hiddenElement5.style.display = 'none'; // 要素を表示する
+                        hiddenElement6.style.display = 'none'; // 要素を表示する
+                        hiddenElement7.style.display = 'none'; // 要素を表示する
+                        hiddenElement8.style.display = 'none'; // 要素を表示する
                     });
                 </script>
                 <script>
@@ -360,6 +373,12 @@
                             var memo_text = json[i].memo;
                               if (memo_cell) {
                               memo_cell.textContent = memo_text;
+                            }
+                              var kind_id = 'kind' + (i + 1);
+                            var kind_cell = document.getElementById(kind_id);
+                            var kind_text = json[i].kind;
+                              if (kind_cell) {
+                              kind_cell.textContent = kind_text;
                             }
                           }
                           // 最終変更時刻を更新
